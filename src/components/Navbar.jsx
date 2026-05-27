@@ -32,11 +32,11 @@ const Navbar = () => {
           : "py-5",
       )}
     >
-      <div className="container text-primary flex items-center justify-around">
+      <div className="container font-space-grotesk text-primary flex items-center justify-around">
         {/* L O G O */}
         <a href="#home" className="text-2xl font-extrabold flex items-center">
           <span className="relative z-10">
-            <span className="text-foreground">ARIJIT </span> KARMAKAR
+            <span className="text-foreground">arijit</span>Karmakar
           </span>
         </a>
 

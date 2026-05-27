@@ -1,6 +1,8 @@
 import React from "react";
 import ThemeToggleButton from "../components/ThemeToggleButton";
 import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import Background from "../components/Background";
 
 const Home = () => {
   return (
@@ -9,6 +11,8 @@ const Home = () => {
       <ThemeToggleButton />
       {/* navbar */}
       <Navbar />
+      <Background />
+      <HeroSection />
 
       {/* M A I N */}
 
