@@ -3,11 +3,11 @@ import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "<home>", href: "#hero" },
+  { name: "<about>", href: "#about" },
+  { name: "<skills>", href: "#skills" },
+  { name: "<projects>", href: "#projects" },
+  { name: "<contact>", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -32,11 +32,11 @@ const Navbar = () => {
           : "py-5",
       )}
     >
-      <div className="container font-space-grotesk text-primary flex items-center justify-around">
+      <div className="container font-space-grotesk text-foreground flex items-center justify-around">
         {/* L O G O */}
         <a href="#home" className="text-2xl font-extrabold flex items-center">
           <span className="relative z-10">
-            <span className="text-foreground">arijit</span>Karmakar
+            <span className="text-primary">{"<"} a/</span>k {">"}
           </span>
         </a>
 
