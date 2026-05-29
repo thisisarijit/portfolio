@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { name: "<home>", href: "#hero" },
+  { name: "<home>", href: "#home" },
   { name: "<about>", href: "#about" },
   { name: "<skills>", href: "#skills" },
   { name: "<projects>", href: "#projects" },
@@ -42,7 +42,7 @@ const Navbar = () => {
 
         {/* nav links */}
         {/* D E S K T O P */}
-        <div className="border-2 rounded-xl py-2 px-5 bg-card hidden md:flex space-x-8">
+        <div className="border-2 py-2 px-5 bg-card hidden md:flex space-x-8">
           {navItems.map((item, index) => (
             <a
               href={item.href}

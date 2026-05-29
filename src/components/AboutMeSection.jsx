@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMeSection = () => {
   return (
-    <section id="about" className="border-foreground border px-6 py-20">
+    <section id="about" className="px-6 py-20">
       <div className="container mx-auto max-w-5xl  space-y-8">
         {/* heading  */}
         <div className="text-center ">
@@ -10,12 +10,12 @@ const AboutMeSection = () => {
             {"<"}
             <span className="text-primary">about</span> me{">"}
           </h3>
-          <p className="tracking-tighter"> who I am . what I do</p>
+          <p> who I am | what I do</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
           {/* left col */}
-          <div className="space-y-5">
+          <div className="space-y-5 my-auto">
             <p className="text-justify">
               MCA graduate focused on becoming a skilled Software Development
               Engineer through consistent learning, problem solving, and

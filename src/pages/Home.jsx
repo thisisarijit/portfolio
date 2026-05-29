@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Background from "../components/Background";
 import AboutMeSection from "../components/AboutMeSection";
+import SkillsSection from "../components/SkillsSection";
+import ProjectSection from "../components/ProjectSection";
 
 const Home = () => {
   return (
@@ -18,6 +20,8 @@ const Home = () => {
       {/* M A I N */}
       <HeroSection />
       <AboutMeSection />
+      <SkillsSection />
+      <ProjectSection />
 
       {/* F O O T E R */}
     </div>

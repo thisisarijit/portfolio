@@ -3,7 +3,7 @@ import hero from "../../public/hero11.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col md:flex-row justify-around items-center gap-12 lg:gap-24 min-h-screen px-6">
+    <section id="home" className="relative flex flex-col md:flex-row justify-around items-center gap-12 lg:gap-24 min-h-screen px-6">
       {/* image */}
       <img
         src={hero}
