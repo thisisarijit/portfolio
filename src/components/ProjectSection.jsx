@@ -37,33 +37,44 @@ const projects = [
 
 const ProjectSection = () => {
   return (
-    <section className="px-6 py-20">
+    <section id="projects" className="px-6 py-20">
       <div className="container max-w-5xl mx-auto space-y-8">
         {/* heading */}
         <div>
-          <h3 className="text-primary text-5xl font-bold">
+          <h3 className="text-foreground text-5xl font-bold">
             {"<"}
-            <span className="text-foreground">key </span> projects{">"}
+            <span className="text-primary">key </span> projects{">"}
           </h3>
           <p>things I build | stuff I code</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div className="card-hover transition-all duration-300 max-w-sm mx-auto bg-card border-primary/50 border">
-              <img src={project.image} alt={project.title} className="" />
+            <div className="group transition-all duration-300 max-w-sm mx-auto bg-card border-primary/50 border">
+              <div className="h-48 overflow-hidden ">
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 " />
+              </div>
 
               <div className="text-left p-4 space-y-2 flex flex-col">
                 <span className="flex justify-center gap-4">
                   {project.tags.map((tag, index) => (
-                    <p key={index} className="border border-foreground text-sm px-3 bg-primary-foreground/20 rounded-full">{tag}</p>
+                    <p
+                      key={index}
+                      className="border border-foreground text-sm px-3 bg-primary-foreground/20 rounded-full"
+                    >
+                      {tag}
+                    </p>
                   ))}
                 </span>
-                <p className="text-primary text-3xl font-bold">{project.title}</p>
+                <p className="text-primary text-3xl font-bold">
+                  {project.title}
+                </p>
                 <p className="text-justify">{project.description}</p>
                 <div className="flex gap-4">
-                  <ExternalLink className="cursor-pointer"/>
-                  <a href="" className="font-semibold">Github</a>
+                  <ExternalLink className="cursor-pointer" />
+                  <a href="" className="font-semibold">
+                    Github
+                  </a>
                 </div>
               </div>
             </div>
