@@ -8,7 +8,7 @@ const AboutMeSection = () => {
         <div className="text-center ">
           <h3 className="text-5xl font-bold text-foreground">
             {"<"}
-            <span className="text-primary">about</span> me{">"}
+            <span className="text-primary">about</span> me{" />"}
           </h3>
           <p> who I am | what I do</p>
         </div>

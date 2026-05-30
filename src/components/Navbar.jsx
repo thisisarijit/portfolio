@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* L O G O */}
         <a href="#home" className="text-2xl font-extrabold flex items-center">
           <span className="relative z-10">
-            <span className="text-primary">{"<"} a/</span>k {">"}
+            <span className="text-primary">{"<"} a</span>k {"/>"}
           </span>
         </a>
 

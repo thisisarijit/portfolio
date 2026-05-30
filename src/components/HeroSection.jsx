@@ -1,9 +1,13 @@
 import React from "react";
 import hero from "../../public/hero11.png";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative flex flex-col md:flex-row justify-around items-center gap-12 lg:gap-24 min-h-screen px-6">
+    <section
+      id="home"
+      className="relative flex flex-col md:flex-row justify-around items-center gap-12 lg:gap-24 min-h-screen px-6"
+    >
       {/* image */}
       <img
         src={hero}
@@ -22,10 +26,25 @@ const HeroSection = () => {
         <span className="text-5xl md:text-6xl lg:text-7xl font-extrabold">
           I'm <span className="text-primary">Arijit </span> Karmakar
         </span>
-        <p className="text-lg md:text-xl leading-relaxed  text-primary">
+        {/* <p className="text-lg md:text-xl leading-relaxed  text-primary">
           Competitive Programmer | Problem Solving Enthusiast | MERN Stack
           Developer
-        </p>
+        </p> */}
+        {/* <h1 className="text-6xl font-bold">Arijit Karmakar</h1> */}
+
+        <TypeAnimation
+          sequence={[
+            "competitive programmer",
+            1000,
+            "problem solving enthusisast",
+            1000,
+            "MERN stack developer",
+            1000,
+          ]}
+          speed={30}
+          repeat={Infinity}
+          className="text-primary text-2xl font-medium"
+        />
         <a href="#projects" className="w-fit mt-4 cosmic-button">
           View My Work
         </a>

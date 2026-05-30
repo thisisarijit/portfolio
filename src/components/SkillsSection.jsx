@@ -1,27 +1,17 @@
 import React from "react";
-import c_logo from "../../public/c_logo1.png";
-import cpp_logo from "../../public/cpp_logo.png";
-import js_logo from "../../public/js_logo.png";
-import react_logo from "../../public/react_logo.png";
-import vs_logo from "../../public/vsCode_logo.png";
-import tailwind_logo from "../../public/tailwind_logo.png";
-import github_logo from "../../public/github_logo.png";
-import git_logo from "../../public/git_logo.png";
-import html_logo from "../../public/html_logo.png";
-import css_logo from "../../public/css_logo.png";
-import sql_logo from "../../public/sql_logo.png";
+import { motion } from "framer-motion";
 
 const skills = [
-  { name: "C", level: "90", logo: c_logo },
-  { name: "C++", level: "90", logo: cpp_logo },
-  { name: "JavaScript", level: "80", logo: js_logo },
-  { name: "React", level: "70", logo: react_logo },
-  { name: "HTML", level: "90", logo: html_logo },
-  { name: "CSS", level: "90", logo: css_logo },
-  { name: "Tailwind CSS", level: "90", logo: tailwind_logo },
-  { name: "SQL", level: "80", logo: sql_logo },
-  { name: "VS Code", level: "90", logo: vs_logo },
-  { name: "GitHub", level: "60", logo: git_logo },
+  { name: "C", level: "90", logo: "../../public/c_logo1.png" },
+  { name: "C++", level: "90", logo: "../../public/cpp_logo.png" },
+  { name: "JavaScript", level: "80", logo: "../../public/js_logo.png" },
+  { name: "React", level: "70", logo: "../../public/react_logo.png" },
+  { name: "HTML", level: "90", logo: "../../public/html_logo.png"},
+  { name: "CSS", level: "90", logo: "../../public/css_logo.png"},
+  { name: "Tailwind CSS", level: "90", logo: "../../public/tailwind_logo.png" },
+  { name: "SQL", level: "80", logo:  "../../public/sql_logo.png"},
+  { name: "VS Code", level: "90", logo: "../../public/vsCode_logo.png" },
+  { name: "GitHub", level: "60", logo: "../../public/git_logo.png"},
   { name: "Learning...", level: "0" },
   { name: "Learning...", level: "0" },
 ];
@@ -35,7 +25,7 @@ const SkillsSection = () => {
           <h3 className="text-5xl font-bold text-foreground">
             {"<"}
             <span className="text-primary">tech </span>
-            skills{">"}
+            skills{" />"}
           </h3>
           <p>tech I know | tools I use</p>
           <div className="flex justify-around m-5">
@@ -50,21 +40,24 @@ const SkillsSection = () => {
         {/* skills */}
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
           {skills.map((skill, index) => (
-            <div
-              key={index}
-              className=" p-2 border-2"
-            >
+            <div key={index} className=" p-2 border-2">
               <h3>{skill.name}</h3>
-                <img
-                  key={index}
-                  className="animate-float mx-auto h-15 w-15 md:h-20 md:w-20 hover:scale-110 transition-all duration-300"
-                  src={skill.logo}
-                  alt={skill.name}
-                />
+              <img
+                key={index}
+                className="animate-float mx-auto h-15 w-15 md:h-20 md:w-20 hover:scale-110 transition-all duration-300"
+                src={skill.logo}
+                alt={skill.name}
+              />
               <div className="my-2 w-full bg-foreground/10 h-2 rounded-full overflow-hidden ">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-grow"
-                  style={{ width: skill.level + "%" }}
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 1.2,
+                    delay: index * 0.15,
+                  }}
+                  className="bg-primary  rounded-full h-full"
                 />
               </div>
               <div className="text-right mt-1">

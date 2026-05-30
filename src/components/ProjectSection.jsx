@@ -43,14 +43,14 @@ const ProjectSection = () => {
         <div>
           <h3 className="text-foreground text-5xl font-bold">
             {"<"}
-            <span className="text-primary">key </span> projects{">"}
+            <span className="text-primary">key </span> projects{" />"}
           </h3>
           <p>things I build | stuff I code</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div className="group transition-all duration-300 max-w-sm mx-auto bg-card border-primary/50 border">
+          {projects.map((project, index) => (
+            <div key={index} className="group transition-all duration-300 max-w-sm mx-auto bg-card border-primary/50 border">
               <div className="h-48 overflow-hidden ">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 " />
               </div>

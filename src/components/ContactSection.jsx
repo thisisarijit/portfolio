@@ -20,21 +20,21 @@ const ContactSection = () => {
     }, 1500);
   };
   return (
-    <section id="contact">
+    <section id="contact" className="px-6 py-20">
       <div>
         {/* heading */}
         <div>
           <h3 className="text-foreground text-5xl font-bold">
             {"<"}
-            <span className="text-primary">contact </span> me{">"}
+            <span className="text-primary">contact </span> me{" />"}
           </h3>
           <p>send me a message, and I'll get back to you soon</p>
         </div>
 
-        <div className="bg-foreground/20 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 container py-4">
+        <div className="bg-foreground/30 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 container py-4">
           {/* contact form */}
           <div className="bg-border rounded-lg shadow-2xl p-5">
-            <h3 className="text-3xl font-bold">get in touch</h3>
+            <h3 className="text-3xl font-bold">get in <span className="text-primary">touch</span></h3>
             <p>have something to discuss? lets talk.</p>
             <form
               action=""
@@ -70,7 +70,7 @@ const ContactSection = () => {
           </div>
 
           {/* information */}
-          <div className="min-h-full space-y-2 flex flex-col justify-center">
+          <div className="min-h-full space-y-3 flex flex-col justify-center text-primary">
             <span className="flex  justify-center gap-2">
               <Phone /> +91 9876543210
             </span>
@@ -80,7 +80,7 @@ const ContactSection = () => {
             <span className="flex  justify-center gap-2">
               <Mail /> abcsdeportfolio@gmail.com
             </span>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-4 mt-5">
               <img src={githubLogo} alt="" className="h-10 w-10" />
               <img src={linkedin_logo} alt="" className="h-10 w-10" />
             </div>
