@@ -1,5 +1,7 @@
 import React from "react";
 import hero from "../../public/hero11.png";
+import githubLogo from "../../public/github_logo.png";
+import linkedin_logo from "../../public/linkedin_logo1.png";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
@@ -26,11 +28,6 @@ const HeroSection = () => {
         <span className="text-5xl md:text-6xl lg:text-7xl font-extrabold">
           I'm <span className="text-primary">Arijit </span> Karmakar
         </span>
-        {/* <p className="text-lg md:text-xl leading-relaxed  text-primary">
-          Competitive Programmer | Problem Solving Enthusiast | MERN Stack
-          Developer
-        </p> */}
-        {/* <h1 className="text-6xl font-bold">Arijit Karmakar</h1> */}
 
         <TypeAnimation
           sequence={[
@@ -45,9 +42,21 @@ const HeroSection = () => {
           repeat={Infinity}
           className="text-primary text-2xl font-medium"
         />
-        <a href="#projects" className="w-fit mt-4 cosmic-button">
-          View My Work
-        </a>
+          <a href="#projects" className="w-fit cosmic-button">
+            View My Work
+          </a>
+        <div className="flex justify-center bg-border/70 mt-5 items-center gap-5">
+          <img
+            src={githubLogo}
+            alt=""
+            className="h-10 w-10  rounded-full cursor-pointer"
+          />
+          <img
+            src={linkedin_logo}
+            alt=""
+            className="h-10 w-10 rounded-full cursor-pointer"
+          />
+        </div>
       </div>
     </section>
   );
