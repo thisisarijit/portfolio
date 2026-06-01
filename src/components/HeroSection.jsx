@@ -11,11 +11,20 @@ const HeroSection = () => {
       className="relative flex flex-col md:flex-row justify-around items-center gap-12 lg:gap-24 min-h-screen px-6"
     >
       {/* image */}
-      <img
-        src={hero}
-        className="relative object-cover h-50 w-50 md:h-80 md:w-80 rounded-full border-b border-primary/30 shadow-[0_25px_30px_-12px_rgba(43,192,22,0.35)]"
-        alt="arijit karmakar"
-      />
+      <div className="space-y-5 flex flex-col items-center">
+        <img
+          src={hero}
+          className="relative object-cover h-50 w-50 md:h-80 md:w-80 rounded-full border-b border-primary/30 shadow-[0_25px_30px_-12px_rgba(43,192,22,0.35)]"
+          alt="arijit karmakar"
+        />
+        <div className="border-2 rounded-full flex items-center justify-center gap-2 p-2 w-fit">
+          <span class="relative flex size-3">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex size-3 rounded-full bg-primary"></span>
+          </span>
+          Available for work
+        </div>
+      </div>
 
       {/* slash */}
       <span className="hidden md:block font-thin text-primary/30 text-[8rem] md:text-[8rem] lg:text-[10rem]">
@@ -32,30 +41,26 @@ const HeroSection = () => {
         <TypeAnimation
           sequence={[
             "competitive programmer",
-            1000,
+            500,
             "problem solving enthusisast",
-            1000,
+            500,
             "MERN stack developer",
-            1000,
+            500,
           ]}
-          speed={30}
+          speed={20}
           repeat={Infinity}
           className="text-primary text-2xl font-medium"
         />
+        <div className="flex justify-center mt-5 items-center gap-5">
           <a href="#projects" className="w-fit cosmic-button">
             View My Work
           </a>
-        <div className="flex justify-center bg-border/70 mt-5 items-center gap-5">
-          <img
-            src={githubLogo}
-            alt=""
-            className="h-10 w-10  rounded-full cursor-pointer"
-          />
-          <img
-            src={linkedin_logo}
-            alt=""
-            className="h-10 w-10 rounded-full cursor-pointer"
-          />
+          <a
+            href="#contact"
+            className="cosmic-button bg-card border-2 text-foreground"
+          >
+            Lets Talk
+          </a>
         </div>
       </div>
     </section>

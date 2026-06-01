@@ -6,12 +6,12 @@ const skills = [
   { name: "C++", level: "90", logo: "../../public/cpp_logo.png" },
   { name: "JavaScript", level: "80", logo: "../../public/js_logo.png" },
   { name: "React", level: "70", logo: "../../public/react_logo.png" },
-  { name: "HTML", level: "90", logo: "../../public/html_logo.png"},
-  { name: "CSS", level: "90", logo: "../../public/css_logo.png"},
+  { name: "HTML", level: "90", logo: "../../public/html_logo.png" },
+  { name: "CSS", level: "90", logo: "../../public/css_logo.png" },
   { name: "Tailwind CSS", level: "90", logo: "../../public/tailwind_logo.png" },
-  { name: "SQL", level: "80", logo:  "../../public/sql_logo.png"},
+  { name: "SQL", level: "80", logo: "../../public/sql_logo.png" },
   { name: "VS Code", level: "90", logo: "../../public/vsCode_logo.png" },
-  { name: "GitHub", level: "60", logo: "../../public/git_logo.png"},
+  { name: "GitHub", level: "60", logo: "../../public/git_logo.png" },
   { name: "Learning...", level: "0" },
   { name: "Learning...", level: "0" },
 ];
@@ -28,13 +28,6 @@ const SkillsSection = () => {
             skills{" />"}
           </h3>
           <p>tech I know | tools I use</p>
-          <div className="flex justify-around m-5">
-            <a href="">All</a>
-            <a href="">Languages</a>
-            <a href="">Frontend</a>
-            <a href="">DB</a>
-            <a href="">Tools</a>
-          </div>
         </div>
 
         {/* skills */}

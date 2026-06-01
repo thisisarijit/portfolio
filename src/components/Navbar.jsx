@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const navItems = [
   { name: "<home>", href: "#home" },
@@ -28,11 +29,11 @@ const Navbar = () => {
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
         isScrolled
-          ? "py-3 bg-background/20 backdrop-blur-md shadow-md"
+          ? "my-5 rounded-full bg-background/20 backdrop-blur-md shadow-md"
           : "py-5",
       )}
     >
-      <div className="container font-space-grotesk text-foreground flex items-center justify-around">
+      <div className="container font-space-grotesk text-foreground flex items-center justify-around border-2 rounded-full">
         {/* L O G O */}
         <a href="#home" className="text-2xl font-extrabold flex items-center">
           <span className="relative z-10">
@@ -42,7 +43,7 @@ const Navbar = () => {
 
         {/* nav links */}
         {/* D E S K T O P */}
-        <div className="border-2 py-2 px-5 bg-card hidden md:flex space-x-8">
+        <div className=" py-3 px-10 rounded-full bg-border/50 hidden md:flex space-x-8">
           {navItems.map((item, index) => (
             <a
               href={item.href}
@@ -84,6 +85,7 @@ const Navbar = () => {
             ))}
           </div>
         </div>
+        <ThemeToggleButton />
       </div>
     </nav>
   );
