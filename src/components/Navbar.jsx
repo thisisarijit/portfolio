@@ -35,9 +35,9 @@ const Navbar = () => {
     >
       <div className="container font-space-grotesk text-foreground flex items-center justify-around border-2 rounded-full">
         {/* L O G O */}
-        <a href="#home" className="text-2xl font-extrabold flex items-center">
+        <a href="/" className="text-2xl font-extrabold flex items-center">
           <span className="relative z-10">
-            <span className="text-primary">{"<"} a</span>k {"/>"}
+            <span className="text-primary">{"<"}a</span>k{"/>"}
           </span>
         </a>
 

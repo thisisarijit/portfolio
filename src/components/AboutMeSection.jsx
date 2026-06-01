@@ -1,18 +1,71 @@
+import { motion } from "framer-motion";
+import { Download, FileDown, FileDownIcon } from "lucide-react";
 import React from "react";
 
 const AboutMeSection = () => {
+  const fadeVariants = {
+    hidden: {
+      opacity: 0,
+      y: -100,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.9,
+      },
+    },
+  };
+  const timelineVariants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+  const cardsVariants = {
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
   return (
     <section id="about" className="px-6 py-20">
-      <div className="container mx-auto max-w-5xl  space-y-8">
+      <div className="container mx-auto max-w-5xl space-y-8">
         {/* heading  */}
-        <div className="text-center ">
+        <motion.div
+          className="text-center"
+          variants={fadeVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           <h3 className="text-5xl font-bold text-foreground">
             {"<"}
             <span className="text-primary">about</span> me{" />"}
           </h3>
           <p> who I am | what I do</p>
-        </div>
-        <p className="max-w-3xl mx-auto text-center text-muted-foreground leading-relaxed">
+        </motion.div>
+        <motion.p
+          className="max-w-3xl mx-auto text-center text-muted-foreground leading-relaxed"
+          variants={fadeVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           MCA graduate focused on becoming a skilled Software Development
           Engineer through consistent learning, problem solving, and real-world
           project building. I specialize in modern web development with the MERN
@@ -21,11 +74,17 @@ const AboutMeSection = () => {
           fundamentals and problem solving. I enjoy building clean, responsive,
           and user-focused applications while continuously improving my coding
           and development skills.
-        </p>
+        </motion.p>
 
         <div className="grid md:grid-cols-2 gap-4">
           {/* left col */}
-          <div className="relative pl-9">
+          <motion.div
+            className="relative pl-9"
+            variants={timelineVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             {/* vertical Line */}
             <div className="absolute left-3 top-2 bottom-2 w-px bg-primary/40"></div>
 
@@ -53,11 +112,17 @@ const AboutMeSection = () => {
                 <p className="text-muted-foreground">Raghunathpur College</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* right col */}
           <div>
-            <div className="space-y-4">
+            <motion.div
+              className="space-y-4"
+              variants={cardsVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               <div className="border-primary/50 card-box card-hover p-4 text-left">
                 <h3 className="text-xl font-bold text-primary">
                   UI/UX Development
@@ -87,11 +152,15 @@ const AboutMeSection = () => {
                   logical reasoning, coding speed, and problem-solving skills.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-        <a href="" className="cosmic-button">
-          Download Resume
+        <a
+          href="../../public/Arijit_Karmakar_Resume.pdf"
+          target="_blank"
+          className="cosmic-button flex justify-center gap-2 w-fit mx-auto"
+        >
+          Download Resume <Download />
         </a>
       </div>
     </section>

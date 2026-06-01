@@ -17,23 +17,79 @@ const skills = [
 ];
 
 const SkillsSection = () => {
+  const headingVariants = {
+    hidden: {
+      opacity: 0,
+      y: 15,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  const skillsContainer = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+  const skillVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.95,
+    },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   return (
     <section id="skills" className="px-6 py-20">
       <div className="container mx-auto max-w-5xl space-y-8">
         {/* heading */}
-        <div>
+        <motion.div
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           <h3 className="text-5xl font-bold text-foreground">
             {"<"}
             <span className="text-primary">tech </span>
             skills{" />"}
           </h3>
           <p>tech I know | tools I use</p>
-        </div>
+        </motion.div>
 
         {/* skills */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+        <motion.div
+          className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5"
+          variants={skillsContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           {skills.map((skill, index) => (
-            <div key={index} className=" p-2 border-2">
+            <motion.div
+              key={index}
+              className=" p-2 border-2"
+              variants={skillVariants}
+              whileHover={{
+                y: -5,
+                scale: 1.03,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
               <h3>{skill.name}</h3>
               <img
                 key={index}
@@ -56,9 +112,9 @@ const SkillsSection = () => {
               <div className="text-right mt-1">
                 <span className="text-sm">{skill.level}%</span>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

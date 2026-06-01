@@ -3,6 +3,7 @@ import React from "react";
 import githubLogo from "../../public/github_logo.png";
 import linkedin_logo from "../../public/linkedin_logo1.png";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,19 +20,58 @@ const ContactSection = () => {
       setIsSubmitting(false);
     }, 1500);
   };
+
+  const headingVariants = {
+    hidden: {
+      opacity: 0,
+      y: 15,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay: 0.3,
+      },
+    },
+  };
   return (
     <section id="contact" className="px-6 py-20">
       <div className="container max-w-5xl mx-auto space-y-8">
         {/* heading */}
-        <div>
+        <motion.div
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           <h3 className="text-foreground text-5xl font-bold">
             {"<"}
             <span className="text-primary">contact </span> me{" />"}
           </h3>
           <p>send me a message, and I'll get back to you soon</p>
-        </div>
+        </motion.div>
 
-        <div className="bg-foreground/30 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 container py-4">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="bg-foreground/30 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 container py-4"
+        >
           {/* contact form */}
           <div className="bg-border rounded-lg shadow-2xl p-5">
             <h3 className="text-3xl font-bold">
@@ -108,7 +148,7 @@ const ContactSection = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
