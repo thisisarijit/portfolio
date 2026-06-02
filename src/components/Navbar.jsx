@@ -8,6 +8,7 @@ const navItems = [
   { name: "<about>", href: "#about" },
   { name: "<skills>", href: "#skills" },
   { name: "<projects>", href: "#projects" },
+  { name: "<certificates>", href: "#certificates" },
   { name: "<contact>", href: "#contact" },
 ];
 
@@ -43,7 +44,7 @@ const Navbar = () => {
 
         {/* nav links */}
         {/* D E S K T O P */}
-        <div className=" py-3 px-10 rounded-full bg-border/50 hidden md:flex space-x-8">
+        <div className="py-3 px-5 rounded-full bg-border/50 hidden md:text-xs lg:text-sm md:flex space-x-8">
           {navItems.map((item, index) => (
             <a
               href={item.href}
