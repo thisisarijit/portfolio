@@ -2,16 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "C", level: "90", logo: "../../public/c_logo1.png" },
-  { name: "C++", level: "90", logo: "../../public/cpp_logo.png" },
-  { name: "JavaScript", level: "80", logo: "../../public/js_logo.png" },
-  { name: "React", level: "70", logo: "../../public/react_logo.png" },
-  { name: "HTML", level: "90", logo: "../../public/html_logo.png" },
-  { name: "CSS", level: "90", logo: "../../public/css_logo.png" },
-  { name: "Tailwind CSS", level: "90", logo: "../../public/tailwind_logo.png" },
-  { name: "SQL", level: "80", logo: "../../public/sql_logo.png" },
-  { name: "VS Code", level: "90", logo: "../../public/vsCode_logo.png" },
-  { name: "GitHub", level: "60", logo: "../../public/git_logo.png" },
+  { name: "C", level: "90", logo: "/c_logo1.png" },
+  { name: "C++", level: "90", logo: "/cpp_logo.png" },
+  { name: "JavaScript", level: "80", logo: "/js_logo.png" },
+  { name: "React", level: "70", logo: "/react_logo.png" },
+  { name: "HTML", level: "90", logo: "/html_logo.png" },
+  { name: "CSS", level: "90", logo: "/css_logo.png" },
+  { name: "Tailwind CSS", level: "90", logo: "/tailwind_logo.png" },
+  { name: "SQL", level: "80", logo: "/sql_logo.png" },
+  { name: "VS Code", level: "90", logo: "/vsCode_logo.png" },
+  { name: "GitHub", level: "60", logo: "/git_logo.png" },
   { name: "Learning...", level: "0" },
   { name: "Learning...", level: "0" },
 ];
