@@ -156,8 +156,9 @@ const AboutMeSection = () => {
           </div>
         </div>
         <a
-          href="../../public/Arijit_Karmakar_Resume.pdf"
+          href="/Arijit_Karmakar_Resume.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="cosmic-button flex justify-center gap-2 w-fit mx-auto"
         >
           Download Resume <Download />

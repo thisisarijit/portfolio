@@ -71,7 +71,7 @@ const SkillsSection = () => {
 
         {/* skills */}
         <motion.div
-          className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5"
           variants={skillsContainer}
           initial="hidden"
           whileInView="show"
@@ -80,7 +80,7 @@ const SkillsSection = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className=" p-2 border-2"
+              className="p-2 border-2"
               variants={skillVariants}
               whileHover={{
                 y: -5,
