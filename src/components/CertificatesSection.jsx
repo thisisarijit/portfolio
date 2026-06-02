@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { CalendarCheck } from "lucide-react";
 
 const CertificatesSection = () => {
   const certificates = [
@@ -119,7 +120,10 @@ const CertificatesSection = () => {
               </div>
               <div className="h-px bg-foreground mt-5"></div>
               <span className="flex justify-between items-center">
-                <p>{certificate.issued}</p>
+                <p className="flex gap-1 justify-around items-center text-foreground/50">
+                  {" "}
+                  <CalendarCheck className="h-5 w-5" /> {certificate.issued}
+                </p>
                 <a
                   href={certificate.path}
                   target="_blank"

@@ -135,7 +135,7 @@ const ContactSection = () => {
                 <Mail className="text-primary" />
                 <span className="font-medium text-left">
                   <h4 className="text-foreground/30">Email</h4>
-                  abcsdeportfolio@gmail.com
+                  arijitkarmakar873@gmail.com
                 </span>
               </span>
             </div>
