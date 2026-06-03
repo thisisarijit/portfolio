@@ -58,7 +58,7 @@ const ContactSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-foreground text-5xl font-bold">
+          <h3 className="section-heading">
             {"<"}
             <span className="text-primary">contact </span> me{" />"}
           </h3>
@@ -70,7 +70,7 @@ const ContactSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="bg-foreground/30 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 container py-4"
+          className="sm:container bg-foreground/30 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 px-2 py-4"
         >
           {/* contact form */}
           <div className="bg-border rounded-lg shadow-2xl p-5">
@@ -96,7 +96,7 @@ const ContactSection = () => {
               />
               <input
                 type="text"
-                placeholder="Type your message..."
+                placeholder="Message"
                 required
                 className="w-full px-4 py-3 rounded-md border border-foreground focus:outline-hidden focus:ring-2 focus:ring-primary text-center"
               />
@@ -105,7 +105,7 @@ const ContactSection = () => {
                 disabled={isSubmitting}
                 className="cosmic-button w-full rounded-lg flex gap-2 justify-center"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Sending..." : "Send"}
                 <SendIcon />
               </button>
             </form>

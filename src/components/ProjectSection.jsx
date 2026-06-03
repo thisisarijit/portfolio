@@ -84,7 +84,7 @@ const ProjectSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-foreground text-5xl font-bold">
+          <h3 className="section-heading">
             {"<"}
             <span className="text-primary">key </span> projects{" />"}
           </h3>

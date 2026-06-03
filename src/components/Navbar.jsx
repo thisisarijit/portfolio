@@ -28,15 +28,15 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled
-          ? "my-5 rounded-full bg-background/20 backdrop-blur-md shadow-md"
-          : "py-5",
+        "fixed w-full z-40 transition-all duration-300 border-2 rounded-full",
+        isScrolled && !isMenuOpen
+          ? "my-5 bg-background/20 backdrop-blur-md shadow-md"
+          : "",
       )}
     >
-      <div className="container font-space-grotesk text-foreground flex items-center justify-around border-2 rounded-full">
+      <div className="container font-space-grotesk text-foreground flex items-center justify-around rounded-full">
         {/* L O G O */}
-        <a href="/" className="text-2xl font-extrabold flex items-center">
+        <a href="#home" className="text-2xl font-extrabold flex items-center">
           <span className="relative z-10">
             <span className="text-primary">{"<"}a</span>k{"/>"}
           </span>
@@ -66,14 +66,14 @@ const Navbar = () => {
         </button>
         <div
           className={cn(
-            "fixed inset-0 bg-background/10 backdrop-blur-md z-40 flex flex-col justify-center items-center",
+            "fixed inset-0 bg-background/50  backdrop-blur-lg z-40",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none",
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col items-center justify-center bg-background/90 space-y-8 h-screen text-xl">
             {navItems.map((item, key) => (
               <a
                 key={key}

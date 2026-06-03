@@ -53,7 +53,7 @@ const AboutMeSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-5xl font-bold text-foreground">
+          <h3 className="section-heading">
             {"<"}
             <span className="text-primary">about</span> me{" />"}
           </h3>
@@ -66,14 +66,10 @@ const AboutMeSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          MCA graduate focused on becoming a skilled Software Development
-          Engineer through consistent learning, problem solving, and real-world
-          project building. I specialize in modern web development with the MERN
-          stack and actively practice Data Structures & Algorithms and
-          competetive programming in various platforms to strengthen my
-          fundamentals and problem solving. I enjoy building clean, responsive,
-          and user-focused applications while continuously improving my coding
-          and development skills.
+          MCA graduate passionate about software development and problem
+          solving. I build web applications using the MERN stack and
+          continuously improve my skills through DSA, competitive programming,
+          and hands-on projects.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-4">

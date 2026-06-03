@@ -61,7 +61,7 @@ const SkillsSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-5xl font-bold text-foreground">
+          <h3 className="section-heading">
             {"<"}
             <span className="text-primary">tech </span>
             skills{" />"}
