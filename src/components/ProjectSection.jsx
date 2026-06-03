@@ -116,11 +116,11 @@ const ProjectSection = () => {
               </div>
 
               <div className="text-left p-4 space-y-2 flex flex-col">
-                <span className="flex justify-center gap-4">
+                <span className="flex justify-end gap-2">
                   {project.tags.map((tag, index) => (
                     <p
                       key={index}
-                      className="border border-foreground text-sm px-3 bg-primary-foreground/20 rounded-full"
+                      className="border border-foreground text-sm px-1 bg-primary-foreground/20 rounded-full"
                     >
                       {tag}
                     </p>
