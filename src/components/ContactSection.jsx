@@ -4,16 +4,19 @@ import githubLogo from "../../public/github_logo.png";
 import linkedin_logo from "../../public/linkedin_logo1.png";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useToast } from "../hooks/use-toast";
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = () => {
+  
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     setIsSubmitting(true);
 
     setTimeout(() => {
-      Toast({
+      toast({
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
@@ -73,7 +76,10 @@ const ContactSection = () => {
           className="sm:container bg-foreground/30 grid grid-cols-1 md:grid-cols-2 justify-between max-w-5xl gap-4 px-2 py-4"
         >
           {/* contact form */}
-          <div className="bg-border rounded-lg shadow-2xl p-5">
+          <div
+            className="bg-border rounded-lg shadow-2xl p-5"
+            onSubmit={handleSubmit}
+          >
             <h3 className="text-3xl font-bold">
               get in <span className="text-primary">touch</span>
             </h3>
@@ -95,7 +101,9 @@ const ContactSection = () => {
                 className="w-full px-4 py-3 rounded-md border border-foreground focus:outline-hidden focus:ring-2 focus:ring-primary text-center"
               />
               <input
-                type="text"
+                type="textarea"
+                required
+                row={5}
                 placeholder="Message"
                 required
                 className="w-full px-4 py-3 rounded-md border border-foreground focus:outline-hidden focus:ring-2 focus:ring-primary text-center"
@@ -103,6 +111,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
+                // onSubmit={handleSubmit}
                 className="cosmic-button w-full rounded-lg flex gap-2 justify-center"
               >
                 {isSubmitting ? "Sending..." : "Send"}
