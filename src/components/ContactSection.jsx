@@ -9,7 +9,7 @@ import { useToast } from "../hooks/use-toast";
 const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -105,7 +105,6 @@ const ContactSection = () => {
                 required
                 row={5}
                 placeholder="Message"
-                required
                 className="w-full px-4 py-3 rounded-md border border-foreground focus:outline-hidden focus:ring-2 focus:ring-primary text-center"
               />
               <button
