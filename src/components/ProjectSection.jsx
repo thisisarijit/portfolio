@@ -6,6 +6,16 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
+    title: "WebPad",
+    description:
+      "Built a responsive browser-based web IDE for writing and running HTML, CSS and JavaScript with an integrated real-time preview",
+    image: "/projects/webPad.png",
+    tags: ["React", "Context API", "Tailwind", "CodeMirror"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 2,
     title: "Foodpark",
     description:
       "Foodpark is a full-featured food ordering platform where users can explore dishes, filter menu items, manage their cart, and complete orders through an interactive checkout process. Focused on responsive design, state management, and user experience.",
@@ -15,7 +25,7 @@ const projects = [
     githubUrl: "#",
   },
   {
-    id: 2,
+    id: 3,
     title: "YumSecrets",
     description:
       "An API based food recipe finder web application using react. The user can browse through the recipes and display the selected recipe details. The user can also search the recipe from the search bar present at the top of the page. ",
@@ -25,7 +35,7 @@ const projects = [
     githubUrl: "#",
   },
   {
-    id: 3,
+    id: 4,
     title: "Face Recognition",
     description:
       "Built a face recognition attendance application using Python, OpenCV, LBPH, and Tkinter. The system captures facial data, recognizes registered users in real time, and maintains attendance records in CSV format through an intuitive GUI.",

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import hero from "../../public/hero11.png";
-import githubLogo from "../../public/github_logo.png";
-import linkedin_logo from "../../public/linkedin_logo1.png";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
