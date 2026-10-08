@@ -126,7 +126,7 @@ const ProjectSection = () => {
               </div>
 
               <div className="text-left p-4 space-y-2 flex flex-col">
-                <span className="flex justify-end gap-2">
+                <span className="flex justify-end gap-2 flex-wrap">
                   {project.tags.map((tag, index) => (
                     <p
                       key={index}
